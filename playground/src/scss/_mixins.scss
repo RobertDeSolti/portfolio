@@ -1,0 +1,112 @@
+@mixin flexCHV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin displayHide {
+    display: none;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+
+	@font-face {
+	font-family: $font_name;
+	font-display: swap;
+	src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+	font-weight: #{$weight};
+	font-style: #{$style};
+	}
+}
+
+%wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+%buttonAct{
+	color: #ffffff;
+	border: none;
+	background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
+	border-radius: 4px;
+	transition: .2s ease-in-out;
+	padding: 15px 20px; 
+	outline: none;
+	transition: .2s ease-in-out;
+	@extend %buttxt;
+	cursor: pointer;
+	text-decoration: none;	
+}
+
+%buttonUnact{
+	color: #414141;
+	background-color: #fff;
+	border-radius: 4px;
+	border: solid 1px;
+	transition: .2s ease-in-out;
+	padding: 15px 20px; 
+	outline: none;
+	transition: .2s ease-in-out;
+	@extend %buttxt;
+	cursor: pointer;
+	text-decoration: none;	
+}
+
+@keyframes bckanim {
+	0%, 100% {
+		background-color: #FE985B;
+	  }
+	  50% {
+		background-color: #FE4FA7;
+	  }
+  }
+
+
+/* ----------------- Media queris mobile first
+----------------------------------------------------------------------- */
+
+@mixin breakpoint ($point) {
+    @if $point == 'mobile' {
+        @media only screen and (min-width: 360px) { @content; }
+    }
+
+    @else if $point == 'tablet' {
+        @media only screen and (min-width: 480px) { @content; }
+    }
+
+    @else if $point == 'desktop' {
+        @media only screen and (min-width: 768px) { @content; }
+    }
+
+    @else if $point == 'large-desktop' {
+        @media only screen and (min-width: 1024px) { @content; }
+    }
+
+    @else if $point == 'extra-large-desktop' {
+        @media only screen and (min-width: 1366px) { @content; }
+    }
+
+    @else {
+        @media only screen and (min-width: $point) { @content; }
+    }
+}
+
+/* ----------------- Media queris desktop first
+----------------------------------------------------------------------- */
+
+// @mixin breakpoint ($point) {
+//     @if $point == 'mobile' {
+//         @media only screen and (min-width: 120px) and (max-width : 767px) { @content; }
+//     }
+
+//     @else if $point == 'tablet' {
+//         @media only screen and (min-width: 768px) and (max-width : 1399px) { @content; }
+//     }
+
+//     @else if $point == 'desktop' {
+//         @media only screen and (min-width: 1400px) { @content; }
+//     }
+
+//     @else {
+//         @media only screen and (min-width: $point) { @content; }
+//     }
+// }
