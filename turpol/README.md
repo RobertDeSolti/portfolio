@@ -68,17 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-### Storybook install to React 17 
-use this :
-npx -p @storybook/cli sb init 
-
-or
-
-npm i @storybook/cli npx sb init
-
-or
-
-for react 17.0.1 and npm 7.5.2
-npx --legacy-peer-deps sb init

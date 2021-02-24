@@ -1,0 +1,44 @@
+@import "../scss/mixins.scss";
+@import "../scss/colors.scss";
+@import "../scss/icons.scss";
+
+
+.section-wrapper {
+	display: flex;
+	flex-shrink: 1;
+	max-width: 1160px;
+	margin: 0 auto;
+	padding-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content: space-between;
+	
+
+	&__logo {
+		max-width: 82px;
+		.link {
+			&__svg {
+				width: 82px;
+			}
+		}
+	}
+	&__menu {		
+		.list {
+			display: flex;
+			flex-wrap: wrap;
+			font-family: 'Lato';
+			list-style: none;
+			&__item {
+				margin-left: 80px;
+				.links {
+					text-decoration: none;
+					text-decoration-line: none;
+					text-decoration-color: $white;
+					font-size: 24px;
+					color: $white;
+				}
+			}
+		}
+	}
+}

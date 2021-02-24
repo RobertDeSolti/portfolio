@@ -1,0 +1,68 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+@import "./icons.scss";
+
+.section-banner {
+	background: url(../img/cta_block.jpg) no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin-bottom: 130px;
+	.section-wrapper {
+		display: flex;
+		flex-direction: column;
+		max-width: 1160px;
+		margin: 0 auto;
+		font-family: Lato;
+		font-size: 24px;
+		color: $white;
+		position: relative;
+		z-index: 10;
+	}
+	&::before{
+		content: ' ';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
+		z-index: 5;
+	}
+	&-content{
+		padding-top: 260px;
+		&__tittle{
+			font-size: 50px;
+			line-height: 60px;
+			font-weight: 600;
+			color: $white;
+			margin-bottom: 30px;
+			width: 60%;
+		}
+		&__subtittle{
+			font-size: 20px;
+			line-height: 26px;
+			font-weight: 400;
+			margin-bottom: 70px;
+			width: 60%;
+		}
+		&__form{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			&-submit{
+				font-size: 22px;
+				font-weight: 500;
+				color: $white;
+				padding: 12px 40px;
+				background-color: $primary;
+				border: none;
+				border-radius: 5px;
+				outline: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+@import "./icons.scss";
+
+.section-inspiration{
+	margin-bottom: 130px;
+	.section-inner{
+
+		max-width: 1260px;
+		margin: 0 auto;
+		font-family: "Lato";
+
+	}
+	&__head{
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		padding-bottom: 25px;
+		&::after{
+			content: ' ';
+			position: absolute;
+			border: 2px solid #006DFE;
+			width: 250px;
+			bottom: 0;
+		}
+
+		.tittle{
+			font-size: 35px;
+			line-height: 42px;
+			font-weight: 600;
+			color: $txtMain;
+		}
+		.navigation{
+			display: flex;
+			align-items: center;
+			&__text{
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 500;
+				color: $primary;
+			}
+			&__icon{
+				padding-left: 25px;
+			}
+		}
+	}
+	&__content{
+		padding-top: 50px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 10px;
+		.places-card-size__lrg{
+			grid-column: span 3;
+		}
+		.places-card-size__sm{
+			grid-column: span 2;
+		}
+		.places-card{
+			position: relative;
+			z-index: 10;
+			&::before{
+				content: ' ';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(21, 24, 36, 0.4);
+				z-index: 5;
+			}
+			&__image{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			&__tittle{
+				font-size: 50px;
+				font-weight: 700;
+				color: $white;
+				z-index: 6;
+				position: absolute;
+				left: 30px;
+				bottom: 30px;
+			}
+
+		}
+	}
+
+}

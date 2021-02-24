@@ -1,0 +1,44 @@
+@import "../scss/mixins.scss";
+@import "../scss/colors.scss";
+@import "../scss/icons.scss";
+
+.storybook-button {
+  font-family: "Lato";
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button_primary {
+  color: white;
+  background-color: #1B7DFF;
+}
+.storybook-button_secondary {
+  background-color: #006DFE;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button_small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button_medium {
+	
+	padding: 10px 20px;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0px;
+	text-align: center;
+}
+.storybook-button_large {
+	max-width: 170px;
+	max-height: 42px;
+	padding: 12px 38px;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0px;
+	text-align: center;	
+}
