@@ -1,10 +1,11 @@
 // Footer.stories.js
+/* eslint-disable import/no-anonymous-default-export */
 
 import React from 'react'
 import Footer from './Footer'
 
 export default {
-  title: 'Footer',
+  title: 'Components/Footer',
   component: Footer,
   response: 'desktop',
 }

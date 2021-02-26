@@ -1,4 +1,5 @@
 // Input.stories.js
+/* eslint-disable import/no-anonymous-default-export */
 
 import React from 'react'
 import Input from './Input'

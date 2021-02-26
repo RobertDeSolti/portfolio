@@ -1,9 +1,9 @@
 @import "./mixins.scss";
 @import "./colors.scss";
 @import "./icons.scss";
+@import "../components/footer.scss";
 
 .section-footer{
 	background-color: $footHead;
 	font-family: "Lato";
-	
 }
