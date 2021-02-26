@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Navigation from './components/Navigation'
 
 // CSS
 import './scss/section-perfection.scss'
@@ -30,12 +31,7 @@ function PerfectionBlockOne() {
           this if i had the energy but under the bed, for attack the child, open
           the door,{' '}
         </div>
-        {/* <div className="navigation">
-					<div className="navigation__text">VIEW PREFECTURE</div>
-					<div className="navigation__icon">
-						<img src="img/svg/arrow.svg" alt="svg" className="svg" />
-					</div>
-				</div> */}
+		<Navigation label='VIEW PREFECTURE'/>
       </div>
     </div>
   )
@@ -52,11 +48,11 @@ function PerfectionBlockTwo() {
 				this if i had the energy but under the bed, for attack the child, open
 				the door,{' '}
         	</div>
+			<Navigation label='VIEW THE DUNAJEC'/>
       </div>
 	  <div className='picture'>
         <img src='img/b4_dunajec.jpg' alt='pic' className='picture__img' />
       </div>
-
     </div>
   )
 }

@@ -14,10 +14,22 @@
 .storybook-button_primary {
   color: white;
   background-color: #1B7DFF;
+  &:hover, &:focus{ 
+	background-color: #1766ce;
+	}
+	&:active{
+		background-color: #1e569e;
+	}
 }
 .storybook-button_secondary {
   background-color: #006DFE;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 0px 1px inset;
+  &:hover, &:focus{ 
+	background-color: #005acf;
+	}
+	&:active{
+		background-color: #003c8a;
+	}
 }
 .storybook-button_small {
   font-size: 12px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Navigation from './components/Navigation'
 
 // CSS
 import './scss/section-benefits.scss'
@@ -17,8 +18,6 @@ const thirdBenefit = {
   img: 'img/svg/kiosk.svg',
   tittle: 'Promoting Local Businesses',
 }
-const navigation_text = 'LEARN MORE'
-const navigation_icon = 'img/svg/arrow.svg'
 const content =
   'Jump off balcony, onto strangers head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.'
 
@@ -45,12 +44,7 @@ const Benefitcard = (props) => {
       </div>
       <h4 className='tittle'>{props.tittle}</h4>
       <p className='content'>{content}</p>
-      <div className='navigation'>
-        <p className='navigation__text'>{navigation_text}</p>
-        <div className='navigation__icon'>
-          <img src={navigation_icon} alt='svg' className='svg' />
-        </div>
-      </div>
+		<Navigation label='LEARN MORE'/>
     </div>
   )
 }

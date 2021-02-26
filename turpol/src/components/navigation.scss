@@ -1,0 +1,34 @@
+@import "../scss/mixins.scss";
+@import "../scss/colors.scss";
+@import "../scss/icons.scss";
+
+.navigation{
+	display: flex;
+	align-items: center;
+	&:focus, &:hover {
+		&__text{
+			color: #005ed8;
+		}
+		&__icon{
+			margin-left: 25px;
+		}
+	}
+	&:active{
+		&__text{
+			color: #0051bb;
+		}
+		&__icon{
+			margin-left: 25px;
+		}
+	}
+	&__text{
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: $primary;
+		text-transform: uppercase;
+	}
+	&__icon{
+		margin-left: 25px;
+	}
+}

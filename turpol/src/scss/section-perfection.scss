@@ -48,20 +48,6 @@
 				color: $txtMain;
 				margin-bottom: 65px;
 			}
-			.navigation{
-				display: flex;
-				align-items: center;
-				&__text{
-					font-size: 16px;
-					font-weight: 400;
-					line-height: 24px;
-					color: $primary;
-					text-transform: uppercase;
-				}
-				&__icon{
-					margin-left: 35px;
-				}
-			}
 		}
 	}
 	&__block2{
