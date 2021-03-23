@@ -7,7 +7,7 @@ const Input = ({ primary, type, errors, ...rest}) => {
 	return(
 		<input
 			placeholder={rest.placeholder}
-			className={['input-field', `input-field__${type}`, mode].join(' ')}
+			className={[`input-field__${type}`, mode].join(' ')}
 			type={type}
 			name={rest.name}
 			isWithButton={rest.isWithButton}

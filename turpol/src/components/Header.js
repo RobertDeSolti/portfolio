@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
+
 import './header.scss'
 
 // setup vars
@@ -13,14 +14,14 @@ const links = [
 
   { id: 3, url: '#video', name: 'Videos' },
 
-  { id: 4, url: '#signin', name: 'Sign in' },
+  { id: 4, url: '#footer', name: 'Sign in' },
 ];
 
 export const Header = ({statement ,  onClick , ...rest}) => {
   return (
     <div className='section-wrapper'>
       <div className='section-wrapper__logo'>
-        <a href={rest.href} className='link js-scroll'>
+        <a href={rest.href} className='link'>
           <img
             src='img/svg/turpol-logo_sm.svg'
             alt='logo'
@@ -49,7 +50,7 @@ const MenuLink = (props) => {
   const { url , name } = props;
   return (
     <li className='list__item'>
-      <a href={url} className='links'>
+      <a href={url} className='links js-scroll'>
         {name}
       </a>
     </li>
