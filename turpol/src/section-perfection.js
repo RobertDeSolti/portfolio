@@ -59,19 +59,3 @@ function PerfectionBlockTwo() {
 
 ReactDOM.render(<SectionPerfection />, document.getElementById('perfection'))
 
-{
-  /* <div class="link">
-		<div class="link__text">VIEW THE DUNAJEC</div>
-		<div class="link__icon">
-			<picture><source srcset="img/svg/arrow.svg" type="image/webp"><img src="img/svg/arrow.svg" alt="svg" class="svg"></picture>
-		</div>
-</div> */
-}
-{
-  /* <div class="navigation">
-		<div class="navigation__text">VIEW PREFECTURE</div>
-		<div class="navigation__icon">
-			<img src="img/svg/arrow.svg" alt="svg" class="svg" />
-		</div>
-</div> */
-}

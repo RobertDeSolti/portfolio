@@ -1,0 +1,96 @@
+@import '../scss/colors.scss';
+
+
+.signin-popup{
+	height: 400px;
+	width: 300px;
+	border-radius: 15px;
+	background: rgba(240, 150, 150, 0.8);
+	text-align: center;
+	&__tittle{
+		padding: 20px 0;
+		color: $black;
+		font-family: Lato;
+		text-transform: uppercase;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	&__subtittle{
+		padding-bottom: 15px;
+		font-family: Lato;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 16px;
+		text-align: center;
+		color: $black;
+	}
+	&__inputs{
+		.input-field__text{
+			height: 30px;
+			width: 250px;
+			margin-bottom: 10px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			padding-left: 6px;
+			border-radius: 5px;
+			outline: none;	
+			&::placeholder{
+				font-family: Lato;
+				font-size: 10px;
+				font-weight: 400;
+				text-align: left;
+			}
+		}
+		.input-field__password{
+			height: 30px;
+			width: 250px;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			padding-left: 6px;
+			outline: none;	
+			&::placeholder{
+				font-family: Lato;
+				font-size: 10px;
+				font-weight: 400;
+				text-align: left;
+			}
+		}
+		.input-field__submit{
+			margin: 20px;
+			border-radius: 5px;
+			border: 0;
+			background-color: #006DFE;
+			padding: 6px 36px;
+			color: white;
+			text-transform: uppercase;
+			outline: none;
+		}
+	}
+	&__redirect{
+		&__txt{
+			font-family: Lato;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 16px;
+			letter-spacing: 0px;
+			text-align: center;
+			a{
+				text-decoration: none;
+			}
+		}
+		&__icons{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 10px 70px 20px;
+			.social{
+				display: flex;
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}

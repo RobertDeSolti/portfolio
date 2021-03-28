@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Input from './components/Input'
-import { Button } from './components/Button'
 
 // CSS
 import './scss/section-banner.scss'
