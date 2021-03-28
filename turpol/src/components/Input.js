@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './input.scss';
 
-const Input = ({ primary, type, errors, ...rest}) => {
+const Input = ({ primary, type, errors,value, ...rest}) => {
 	const mode = primary ? 'input-field__primary' : 'input-field__witherror';
 	return(
 		<input
@@ -10,6 +10,7 @@ const Input = ({ primary, type, errors, ...rest}) => {
 			className={[`input-field__${type}`, mode].join(' ')}
 			type={type}
 			name={rest.name}
+			value={value}
 			isWithButton={rest.isWithButton}
 			errors={errors.map((error) => <span className='error-hidden'>{error}, </span>)}
 		/>
@@ -22,6 +23,7 @@ export default Input;
 Input.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
+  value: PropTypes.string,
   type: PropTypes.oneOf([
 	  	'text',
 		'password',

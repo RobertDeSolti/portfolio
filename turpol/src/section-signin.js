@@ -1,23 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PopUp from './components/SignIn'
-import './components/signin.scss'
+import PopUp from './components/SignPopUp'
+import {SignIn} from './components/SignPopUp'
+import './components/signpopup.scss'
 
 
-function SignIn(){
+function PopSignIn(){
 
 	return(
 		<div className="signin">
-			<PopUp 
-			  popupname= 'Sign Up'
-			  destination='sign in'
-			  offertxt='Please sign up to get the best offers'
-			  onClick=''
-			  question='Already'>
-			</PopUp>
+			<PopUp
+			destination="sign up"
+			offertxt={['Please sign in to get the best offers']}
+			onClick="PropTypes.func"
+			popupname={['Sign In']}
+			question={['Don\'t']}
+			signform={<SignIn />}
+			signtype={false}
+			url="#!"
+			/>
 		</div>
 	)
 
 }
 
-ReactDOM.render(<SignIn />, document.getElementById('signin'))
+ReactDOM.render(<PopSignIn />, document.getElementById('signin'))

@@ -1,32 +1,40 @@
 @import '../scss/colors.scss';
 
-
-.signin-popup{
+.sign-popup_signin{
 	height: 400px;
 	width: 300px;
+}
+.sign-popup_signup{
+	height: 330px;
+	width: 300px;
+}
+.sign-popup_signin, .sign-popup_signup{
+	background: #FFFFFF;
+	opacity: 0.85;
+	box-shadow: -42.9298px 8.34471px 87.4667px rgba(51, 51, 51, 0.1945), inset 12.1158px -2.35506px 12.3425px #EFEFEF, inset -12.1158px 2.35506px 12.3425px #FFFFFF;
 	border-radius: 15px;
-	background: rgba(240, 150, 150, 0.8);
 	text-align: center;
-	&__tittle{
+	.sign-popup__tittle{
 		padding: 20px 0;
 		color: $black;
 		font-family: Lato;
+		font-weight: 400;
 		text-transform: uppercase;
 		font-size: 18px;
 		line-height: 24px;
 	}
-	&__subtittle{
+	.sign-popup__subtittle{
 		padding-bottom: 15px;
 		font-family: Lato;
 		font-size: 12px;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 16px;
 		text-align: center;
 		color: $black;
 	}
-	&__inputs{
+	.signup-popup__inputs, .signin-popup__inputs{
 		.input-field__text{
-			height: 30px;
+			height: 25px;
 			width: 250px;
 			margin-bottom: 10px;
 			padding-top: 6px;
@@ -42,7 +50,7 @@
 			}
 		}
 		.input-field__password{
-			height: 30px;
+			height: 25px;
 			width: 250px;
 			border-radius: 5px;
 			margin-bottom: 10px;
@@ -66,10 +74,11 @@
 			color: white;
 			text-transform: uppercase;
 			outline: none;
+			
 		}
 	}
-	&__redirect{
-		&__txt{
+	.sign-popup__redirect{
+		.txt{
 			font-family: Lato;
 			font-size: 12px;
 			font-style: normal;
@@ -81,15 +90,29 @@
 				text-decoration: none;
 			}
 		}
-		&__icons{
+		.icons{
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			padding: 10px 70px 20px;
-			.social{
+			&__social{
 				display: flex;
-				width: 25px;
-				height: 25px;
+				width: 30px;
+				height: 30px;
+				&:hover, &:focus {
+					opacity: 60%;
+					box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;;
+				}
+				&:active{
+					opacity: 80%;
+					box-shadow: rgba(0, 0, 0, 0.1) 0px 23px 28px -8px, rgba(0, 0, 0, 0.04) 0px 13px 13px -5px;;
+				}
+				.links{
+					&__icons{
+						width: 30px;
+						height: 30px;
+					}
+				}
 			}
 		}
 	}
