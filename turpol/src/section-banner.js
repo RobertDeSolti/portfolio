@@ -22,20 +22,8 @@ function SectionBanner() {
 				the door,{' '}
 				</div>
 				<form className='section-banner-content__form'>
-				<Input
-					errors={['Invalid Input']}
-					onClick={() => {}}
-					placeholder='What would you like to do?'
-					primary
-					type='search'
-				/>
-				<Input
-					errors={['Invalid Input']}
-					onClick={() => {}}
-					placeholder='Where would you like to go?'
-					primary
-					type='search'
-				/>
+				<Input errors={['Invalid Input']} onClick={() => {}} placeholder='What would you like to do?' primary type='search'/>
+				<Input errors={['Invalid Input']} onClick={() => {}} placeholder='Where would you like to go?' primary type='search'/>
 				<Submit primary label='SEARCH' size='large' type='submit' />
 				</form>
 			</div>

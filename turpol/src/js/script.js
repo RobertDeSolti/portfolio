@@ -9,6 +9,8 @@
  };
 }());
 
+
+
 // Scroll to anchors
 (function () {
 
@@ -25,7 +27,6 @@
             t--;
             return -c / 2 * (t * (t - 2) - 1) + b;
         };
-    
         const animation = function(currentTime){
             if (startTime === null) startTime = currentTime;
             const timeElapsed = currentTime - startTime;

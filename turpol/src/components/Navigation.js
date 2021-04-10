@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import './navigation.scss';
 
 
-export const Navigation = ({label, ...props }) => {
+export const Navigation = ({label, onClick}) => {
 	return(
-		<div className="navigation" {...props}>
+		<div className="navigation">
 			<div className="navigation__text">{label}</div>
-				<div className="navigation__icon">
+				<div className="navigation__icon" onClick={onClick}>
 						<img src="img/svg/arrow.svg" alt="svg" className="svg" />
 				</div>
 		</div>
-		      
 	)
 }
 

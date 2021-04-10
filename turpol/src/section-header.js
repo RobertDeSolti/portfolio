@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Header  from './components/Header'
+import { StrictMode } from "react";
+
 
 
 // CSS
@@ -14,11 +16,9 @@ function SectionHeader() {
 		</div>
 	)
 }
+ReactDOM.render(
+	<StrictMode>
+		<SectionHeader/>
+	</StrictMode>, 
+		document.getElementById('header'))
 
-
-
-
-
-
-
-ReactDOM.render(<SectionHeader />, document.getElementById('header'))

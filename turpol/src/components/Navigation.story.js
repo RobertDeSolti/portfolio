@@ -9,7 +9,7 @@ export default {
 const Template = (args) => <Navigation {...args} />
 
 // Each story then reuses that template
-export const Primary = Template.bind({})
-Primary.args = {
+export const NavigationArrow = Template.bind({})
+NavigationArrow.args = {
   primary: true,
 }

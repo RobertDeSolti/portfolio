@@ -3,6 +3,7 @@
 @import "../scss/icons.scss";
 
 
+
 .section-wrapper {
 	display: flex;
 	flex-shrink: 1;
@@ -13,7 +14,7 @@
 	flex-wrap: wrap;
 	align-items:center;
 	justify-content: space-between;
-	
+	font-family: 'Lato';
 
 	&__logo {
 		max-width: 82px;
@@ -23,22 +24,30 @@
 			}
 		}
 	}
-	&__menu {		
+	&__menu {
 		.list {
 			display: flex;
 			flex-wrap: wrap;
 			font-family: 'Lato';
 			list-style: none;
+			align-items: baseline;
 			&__item {
 				margin-left: 80px;
+				cursor: pointer;
 				.links {
+					margin: 0;
+					padding: 0;
+					outline: none;
+					border: 0;
+					background: transparent;
 					text-decoration: none;
 					text-decoration-line: none;
 					text-decoration-color: $white;
 					font-size: 24px;
 					color: $white;
+					cursor: pointer;
 					&:hover, &:focus{ 
-						color: rgb(185, 185, 185);
+						color: rgb(224, 224, 224);
 					}
 					&:active{
 						color: $txtMain;
@@ -48,3 +57,11 @@
 		}
 	}
 }
+
+
+
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+  }

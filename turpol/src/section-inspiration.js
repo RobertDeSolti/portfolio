@@ -33,12 +33,6 @@ function SectionInspiration() {
 		<div className='section-inner'>
 			<div className='section-inspiration__head'>
 				<div className='tittle'>Get inspired for your next trip</div>
-				{/* <div className="navigation">
-								<div className="navigation__text">VIEW ALL</div>
-								<div className="navigation__icon">
-									<img src="img/svg/arrow.svg" alt="svg" className="svg" />
-								</div>
-							</div> */}
 			</div>
 			<div className='section-inspiration__content'>
 				<Largecard img={firstLargecard.img} tittle={firstLargecard.tittle} />

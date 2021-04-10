@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Pressbtn } from './components/Button.stories'
 
@@ -56,22 +57,29 @@ function SectionToplist() {
 }
 
 const Postcard = (props) => {
+	// const [count,setCount] = useState(221);
+	// const addLike = () => {
+	// 	 setCount(count + 1);
+	  
   return (
     <div className='postcard'>
       <div className='postcard__tittle'>
-        <img src={props.img} alt='b5_zakopane' className='thumbnail' />
+        <img src={props.img} alt={props.img} className='thumbnail' />
         <div className='overlay'>
           <h3 className='overlay__tittle'>{props.tittle}</h3>
-          <div className='overlay__stats'>
+		  <Poststats/>
+          {/* <div className='overlay__stats'>
             <div className='likes'>
-              <p className='likes__number'>221</p>
-              <img src={like_icon} alt='like' className='likes__icon' />
+              <p className='likes__number'>{count}</p>
+			  <button style={{background: 'transparent',border:0,outline:0,cursor:'pointer'}}>
+			  	<img src={like_icon} alt='like' className='likes__icon' onClick={() => addLike()}/>
+			  </button>
             </div>
             <div className='comments'>
               <p className='comments__number'>50</p>
               <img src={comm_icon} alt='comm' className='comments__icon' />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <p className='postcard__content'>{content}</p>
@@ -81,5 +89,30 @@ const Postcard = (props) => {
     </div>
   )
 }
+
+function Poststats () {
+	const [count,setCount] = useState(221);
+	function addLike () {
+		setCount((prevState) => {
+			return prevState +1
+		});
+	};
+	return(
+		           <div className='overlay__stats'>
+            <div className='likes'>
+              <p className='likes__number'>{count}</p>
+			  <a role='button' className='likes__count likes__ev likes__unactive'>
+			  	<img src={like_icon} alt='like' className='likes__icon' onClick={() => addLike()}/>
+			  </a>
+            </div>
+            <div className='comments'>
+              <p className='comments__number'>50</p>
+              <img src={comm_icon} alt='comm' className='comments__icon' />
+            </div>
+          </div> 
+	)
+
+}
+
 
 ReactDOM.render(<SectionToplist />, document.getElementById('toplist'))

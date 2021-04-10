@@ -1,67 +1,107 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {useState} from 'react'
 import './header.scss'
+import PopUp, {SignIn, SignUp, CloseTag}  from './SignPopUp';
+import {navigationLinks} from '../js/massive'
 
-// setup vars
+export function Header () {
+/* Header elements start */
+	const MenuList = () => {
+		return (
+			<ul className='list'>
+			<MenuLink/>
+			<PopupCall/>
+			</ul>
+		);
+	};
+  	const PopupCall = () => {
+		return(
+			<li className='list__item'>
+				<button type='button' className='links' onClick={TogglePopup}>Sign In</button>
+			</li>
+		)
+ 	};
+/* Header elements end */
+/* Header functions start */
+	const [showPopup, setShowPopup] = useState(false);
+	const [switchPopup, setSwitchPopup] = useState(false)
+	const TogglePopup = () => {
+    	if (showPopup === false){
+    		setShowPopup(true);
+		}
+  	};
+	const SwitchForm = () => {
+		if (switchPopup === false){
+			setShowPopup(false);
+			setSwitchPopup(true);
+		} else {
+			setSwitchPopup(false);
+			setShowPopup(true);
+		}
+	}
+	const ClosePopup = () => {
+		setShowPopup(false);
+		setSwitchPopup(false);
+	}
+/* Header functions end */
+  	return (
+		<div className='section-wrapper'>
+		<div className='section-wrapper__logo'>
+			<a href='localhost:3000/' className='link'>
+				<img src='img/svg/turpol-logo_sm.svg' alt='logo' className='link__svg'/>
+			</a>
+		</div>
+		<nav className='section-wrapper__menu'>
+			<MenuList />
+		</nav>
+		{showPopup ? (
+			<div className="sign-popup">
+				<PopUp
+				destination="sign up"
+				offertxt={['Please sign in to get the best offers']}
+				popupname={['Sign In']}
+				question={['Don\'t']}
+				signform={<SignIn />}
+				closetag={<CloseTag onClick={ClosePopup}/>}
+				signtype={false}
+				url={SwitchForm} 
+				/>
+			</div>
+		) : null}
+		{switchPopup ? (
+				<div className="sign-popup">
+				<PopUp
+				destination="sign in"
+				offertxt={['Please sign up to get the best offers']}
+				popupname={['Sign Up']}
+				question={['Already']}
+				signform={<SignUp />}
+				closetag={<CloseTag onClick={ClosePopup}/>}
+				signtype={true}
+				url={SwitchForm} 
+				/>
+			</div>
+		) : null}
+	</div>
+  	);
+}
 
-const links = [
-  { id: 1, url: '#perfection', name: 'Articles' },
-
-  { id: 2, url: '#toplist', name: 'Locations' },
-
-  { id: 3, url: '#video', name: 'Videos' },
-
-  { id: 4, url: '#footer', name: 'Sign in' },
-];
-
-export const Header = ({statement ,  onClick , ...rest}) => {
-  return (
-    <div className='section-wrapper'>
-      <div className='section-wrapper__logo'>
-        <a href={rest.href} className='link'>
-          <img
-            src='img/svg/turpol-logo_sm.svg'
-            alt='logo'
-            className='link__svg'
-          />
-        </a>
-      </div>
-      <nav className='section-wrapper__menu'>
-        <MenuList />
-      </nav>
-    </div>
-  )
+const MenuLink = () => {
+	const [links] = React.useState(navigationLinks)
+	return (
+		<>
+			{links.map((link) => {
+				const { id, url , name} = link;
+				return(
+				<li key={id} className='list__item' >
+					<a href={url} className='links js-scroll'>
+					{name}
+					</a>
+				</li>
+				)
+			})}
+		</>
+	)
 };
-
-const MenuList = () => {
-  return (
-    <ul className='list'>
-      {links.map((link) => {
-        return <MenuLink key={link.id} {...link}></MenuLink>
-      })}
-    </ul>
-  );
-}
-
-const MenuLink = (props) => {
-  const { url , name } = props;
-  return (
-    <li className='list__item'>
-      <a href={url} className='links js-scroll'>
-        {name}
-      </a>
-    </li>
-  )
-}
 
 export default Header;
 
-Header.propTypes = {
-  statement: PropTypes.bool,
-  onClick: PropTypes.func,
-};
-
-Header.defaultProps = {
-  statement: true,
-  onClick: undefined,
-};
