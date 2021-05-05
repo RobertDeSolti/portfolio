@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 // CSS
 import './scss/section-inspiration.scss'
@@ -64,4 +63,4 @@ const Smallcard = (props) => {
   )
 }
 
-ReactDOM.render(<SectionInspiration />, document.getElementById('inspiration'))
+export default SectionInspiration

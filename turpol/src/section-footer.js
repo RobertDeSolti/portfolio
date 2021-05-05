@@ -1,7 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Footer from './components/Footer'
-
 
 // CSS
 import './scss/section-footer.scss'
@@ -15,7 +13,4 @@ function SectionFooter() {
 	)
 }
 
-
-
-
-ReactDOM.render(<SectionFooter />, document.getElementById('footer'));
+export default SectionFooter

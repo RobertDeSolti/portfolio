@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Input from './components/Input'
 
 // CSS
@@ -32,4 +31,4 @@ function SectionBanner() {
   )
 }
 
-ReactDOM.render(<SectionBanner />, document.getElementById('banner'))
+export default SectionBanner

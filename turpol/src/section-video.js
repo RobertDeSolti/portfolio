@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 // CSS
 import './scss/section-video.scss'
@@ -23,4 +22,4 @@ function SectionVideo() {
   )
 }
 
-ReactDOM.render(<SectionVideo />, document.getElementById('video'))
+export default SectionVideo

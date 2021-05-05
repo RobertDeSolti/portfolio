@@ -23,7 +23,7 @@ const like_icon = 'img/svg/like.svg'
 const content =
   'Jump off balcony, onto strangers head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.'
 
-export default function SectionToplist() {
+function SectionToplist() {
   return (
     <div className='section-toplist'>
       <div className='section-inner'>
@@ -83,6 +83,4 @@ const Poststats = () => {
   )
 }
 
-
-
-ReactDOM.render(<SectionToplist />, document.getElementById('toplist'))
+export default SectionToplist

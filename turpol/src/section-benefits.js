@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Navigation from './components/Navigation'
 
 // CSS
@@ -49,4 +48,4 @@ const Benefitcard = (props) => {
   )
 }
 
-ReactDOM.render(<SectionBenefits />, document.getElementById('benefits'))
+export default SectionBenefits

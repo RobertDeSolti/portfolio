@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Navigation from './components/Navigation'
 
 // CSS
@@ -57,5 +56,4 @@ function PerfectionBlockTwo() {
   )
 }
 
-ReactDOM.render(<SectionPerfection />, document.getElementById('perfection'))
-
+export default SectionPerfection
