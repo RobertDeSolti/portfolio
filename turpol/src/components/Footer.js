@@ -1,17 +1,10 @@
 /* eslint-disable no-dupe-keys */
 /* eslint-disable no-sequences */
-
 /*eslint no-undef: "error"*/
 import PropTypes from 'prop-types';
 import React from 'react';
+import {linkData} from '../js/massive'
 import './footer.scss'
-
-const linkData = [
-	{id: 1, tittle: 'Company', url1: '#Company1',url2: '#Company2', url3:'#Company3',url4:'#Company4', name1:'About',name2:'Team',name3:'Careers',name4:'Privacy Policy'},
-	{id: 2, tittle: 'Locations', url1: '#Locations1',url2:'#Locations2',url3:'#Locations3', url4:'#Locations4', name1:'Warsaw',name2:'Cracow',name3:'Gdansk',name4:'Katowice'},
-	{id: 3, tittle: 'Social Media', url1:'#Social_Media1',url2:'#Social_Media',url3:'#Social_Media',url4:'#Social_Media', name1:'Facebook',name2:'Twitter',name3:'Instagram',name4:'Youtube'}
-]
-
 
 export const Footer = ({response, ...rest}) => {
 	return (
@@ -29,7 +22,6 @@ const FooterLogo = () => {
 		</div>
 	)
 };
-
 
 const Menu = () => {
 	return (
@@ -56,23 +48,6 @@ const Link = (props) => {
 	)
 }
 
-
-
-
-// const NavColumn = (props) => {
-// 	const {tittle, url, name} = props;
-// 	return(
-// 		<div className='nav-column'>
-// 			<p className='nav-column__tittle'>{tittle}</p>
-// 			<ul className='nav-column__chapters'>
-// 				<li className='items'>
-// 					<a href={url} className='items__link'>{name}</a>
-// 				</li>
-// 			</ul>
-// 		</div>
-// 	)
-// }
-
 export default Footer;
 
 Footer.propTypes = {
@@ -83,13 +58,3 @@ Footer.propTypes = {
 Footer.defaultProps = {
 	response: 'desktop'
 };
-
-
-
-
-
-// {linkData.map((linkurl) => {
-// 	url={linkurl};
-// 	name={...linkurl.names};
-// 	return
-// })}

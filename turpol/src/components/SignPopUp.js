@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from './Input'
-import './signpopup.scss';
 import {socialmedialinks} from '../js/massive'
+import './signpopup.scss';
 
 
-export const PopUp = ({url, popupname , destination, signtype, offertxt, question, closetag, signform}) => {
+export const SignPopUp = ({url, popupname , destination, signtype, offertxt, question, closetag, signform}) => {
 	const mode = signtype ? 'sign-popup_signup' : 'sign-popup_signin';
 	return(
 		<div className={mode} id='signpopup'>
@@ -76,9 +76,9 @@ export const CloseTag = (onClick) => {
 }
 
 
-export default PopUp;
+export default SignPopUp;
 
-PopUp.propTypes = {
+SignPopUp.propTypes = {
 	signtype: PropTypes.bool,
 	url: PropTypes.string,
 	destination: PropTypes.string,
@@ -88,7 +88,7 @@ PopUp.propTypes = {
 	signform: PropTypes.element,
   };
 
-PopUp.defaultProps = {
+SignPopUp.defaultProps = {
 	url: '',
 	destination: '',
 	offertxt: '',

@@ -1,13 +1,13 @@
 import React from 'react'
-import {PopUp} from './SignPopUp'
+import {SignPopUp} from './SignPopUp'
 import {SignIn, SignUp} from './SignPopUp'
 
 export default {
   title: 'Components/PopUp',
-  component: PopUp,
+  component: SignPopUp,
 }
 
-const Template = (args) => <PopUp {...args} />
+const Template = (args) => <SignPopUp {...args} />
 
 // Each story then reuses that template
 export const SignInPop = Template.bind({});

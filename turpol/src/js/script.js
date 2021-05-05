@@ -1,12 +1,24 @@
+// (function() {
+//  const header = document.querySelector('section-header');
+//  window.onscroll = () => {
+// 	 if (window.pageYOffset > 50) {
+// 		 header.classList.add('header_active');
+// 	 } else {
+// 		 header.classList.remove('header_active');
+// 	}
+//  };
+// }());
+
+
 (function () {
- const header = document.querySelector('.section-header');
- window.onscroll = () => {
-	 if (window.pageYOffset > 50) {
-		 header.classList.add('section-header_active');
-	 } else {
-		 header.classList.remove('section-header_active');
-	}
- };
+	const header = document.querySelector('header')
+	window.onscroll = () => {
+		if (window.pageYOffset > 50) {
+			header.classList.add('header_active')
+		} else {
+			header.classList.remove('header_avtive')
+		}
+	};
 }());
 
 
@@ -15,7 +27,7 @@
 (function () {
 
     const smoothScroll = function (targetEl, duration) {
-        const headerElHeight =  document.querySelector('.section-header').clientHeight;
+        const headerElHeight =  document.querySelector('.header').clientHeight;
         let target = document.querySelector(targetEl);
         let targetPosition = target.getBoundingClientRect().top - headerElHeight;
         let startPosition = window.pageYOffset;
@@ -35,9 +47,7 @@
             if (timeElapsed < duration) requestAnimationFrame(animation);
         };
         requestAnimationFrame(animation);
-
     };
-
     const scrollTo = function () {
         const links = document.querySelectorAll('.js-scroll');
         links.forEach(each => {

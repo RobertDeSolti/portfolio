@@ -1,13 +1,9 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 
-// CSS
-import './scss/section-perfection.scss'
-// setup vars
-
-function SectionPerfection() {
+const SectionPerfection = () => {
   return (
-	<div className="section-perfection">
+	<div className="section-perfection" id='perfection'>
 		<div className='section-inner'>
 			<PerfectionBlockOne />
 			<PerfectionBlockTwo />
@@ -28,7 +24,7 @@ function PerfectionBlockOne() {
           Jump off balcony, onto stranger's head. Chase ball of string hide when
           guests come over. Being gorgeous with belly side up i could pee on
           this if i had the energy but under the bed, for attack the child, open
-          the door,{' '}
+          the door
         </div>
 		<Navigation label='VIEW PREFECTURE'/>
       </div>
@@ -45,7 +41,7 @@ function PerfectionBlockTwo() {
 				Jump off balcony, onto stranger's head. Chase ball of string hide when
 				guests come over. Being gorgeous with belly side up i could pee on
 				this if i had the energy but under the bed, for attack the child, open
-				the door,{' '}
+				the door
         	</div>
 			<Navigation label='VIEW THE DUNAJEC'/>
       </div>

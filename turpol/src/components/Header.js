@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './header.scss'
-import PopUp, {SignIn, SignUp, CloseTag}  from './SignPopUp';
+import SignPopUp, {SignIn, SignUp, CloseTag}  from './SignPopUp';
 import {navigationLinks} from '../js/massive'
 
 export function Header () {
@@ -55,7 +55,7 @@ export function Header () {
 		</nav>
 		{showPopup ? (
 			<div className="sign-popup">
-				<PopUp
+				<SignPopUp
 				destination="sign up"
 				offertxt={['Please sign in to get the best offers']}
 				popupname={['Sign In']}
@@ -69,7 +69,7 @@ export function Header () {
 		) : null}
 		{switchPopup ? (
 				<div className="sign-popup">
-				<PopUp
+				<SignPopUp
 				destination="sign in"
 				offertxt={['Please sign up to get the best offers']}
 				popupname={['Sign Up']}
@@ -86,7 +86,7 @@ export function Header () {
 }
 
 const MenuLink = () => {
-	const [links] = React.useState(navigationLinks)
+	const [links] = useState(navigationLinks)
 	return (
 		<>
 			{links.map((link) => {

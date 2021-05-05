@@ -1,65 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { inspirationLarge, inspirationSmall } from './js/massive'
 
-// CSS
-import './scss/section-inspiration.scss'
-// setup vars
-
-const firstLargecard = {
-  img: 'img/b3_tatras.jpg',
-  tittle: 'Tatras',
-}
-const secondLargecard = {
-  img: 'img/b3_gdansk.jpg',
-  tittle: 'Gdansk',
-}
-
-const firstSmallcard = {
-  img: 'img/b3_zamosc.jpg',
-  tittle: 'Zamosc',
-}
-const secondSmallcard = {
-  img: 'img/b3_cracow.jpg',
-  tittle: 'Cracow',
-}
-const thirdSmallcard = {
-  img: 'img/b3_warsaw.jpg',
-  tittle: 'Warsaw',
-}
-
-function SectionInspiration() {
+const SectionInspiration = () => {
+	const [inspLarge] = useState(inspirationLarge)
+	const [inspSmall] =useState(inspirationSmall)
   return (
-	<div className="section-inspiration">
-		<div className='section-inner'>
-			<div className='section-inspiration__head'>
-				<div className='tittle'>Get inspired for your next trip</div>
-			</div>
-			<div className='section-inspiration__content'>
-				<Largecard img={firstLargecard.img} tittle={firstLargecard.tittle} />
-				<Largecard img={secondLargecard.img} tittle={secondLargecard.tittle} />
-				<Smallcard img={firstSmallcard.img} tittle={firstSmallcard.tittle} />
-				<Smallcard img={secondSmallcard.img} tittle={secondSmallcard.tittle} />
-				<Smallcard img={thirdSmallcard.img} tittle={thirdSmallcard.tittle} />
-			</div>
-		</div>
-	</div>
-  )
-}
-
-const Largecard = (props) => {
-  return (
-    <figure className='places-card places-card-size__lrg'>
-      <img src={props.img} alt='pic' className='places-card__image' />
-      <figcaption className='places-card__tittle'>{props.tittle}</figcaption>
-    </figure>
-  )
-}
-
-const Smallcard = (props) => {
-  return (
-    <figure className='places-card places-card-size__sm'>
-      <img src={props.img} alt='pic' className='places-card__image' />
-      <figcaption className='places-card__tittle'>{props.tittle}</figcaption>
-    </figure>
+    <div className='section-inspiration'>
+      <div className='section-inner'>
+        <div className='section-inspiration__head'>
+          <div className='tittle'>Get inspired for your next trip</div>
+        </div>
+        <div className='section-inspiration__content'>
+					{inspLarge.map((large)=>{
+						const {id,img,tittle} = large
+						return(
+							<figure className='places-card places-card-size__lrg' key={id}>
+								<img src={img} alt='pic' className='places-card__image' />
+								<figcaption className='places-card__tittle'>{tittle}</figcaption>
+    					</figure>
+						)
+					})}
+					{inspSmall.map((small)=>{
+						const {id,img,tittle} = small  
+						return (
+							<figure className='places-card places-card-size__sm' key={id}>
+								<img src={img} alt='pic' className='places-card__image' />
+								<figcaption className='places-card__tittle'>{tittle}</figcaption>
+							</figure>
+						)
+					})}
+        </div>
+      </div>
+    </div>
   )
 }
 

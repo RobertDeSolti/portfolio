@@ -1,16 +1,13 @@
 import React from 'react'
 
-// CSS
-import './scss/section-video.scss'
-// setup vars
-
-function SectionVideo() {
+const SectionVideo = () => {
   return (
-	<div className="section-video">
+	<div className="section-video" id='video'>
 		<div className='section-inner'>
 			<div className='section-video__embed'>
 				<iframe
 				className='presentation'
+				title='video-section'
 				src='https://www.youtube.com/embed/65j700G51ZY'
 				frameborder='0'
 				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

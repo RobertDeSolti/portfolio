@@ -2,7 +2,7 @@
 @import "./colors.scss";
 @import "./icons.scss";
 
-.section-header{
+.header{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -10,8 +10,5 @@
 	z-index: 15;
 	transition: .2s linear;
 	padding-bottom: 30px;
-
-}
-.section-header_active{
 	background: $footHead;
 }
