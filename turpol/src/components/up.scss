@@ -1,0 +1,45 @@
+.upbt {
+	position: fixed; 
+	display:inline-block;
+	padding: 4px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border:solid 0.5px #3b3b3b;
+	right: 5%;
+	bottom: 40px;
+	text-align:center;
+	font-size: 2rem;
+	font-weight: bold;
+	z-index: 15;
+	cursor: pointer;
+	transition: all 0.5s;
+	color: black;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+		&::content{
+			height:20px;
+		}
+	}
+	span:after {
+		content: '^';
+		position: absolute;
+		top:0;
+		left:0;
+		text-align:center;
+		opacity: 0;
+		transition: 0.5s;
+	}
+	&:hover span {
+		padding-top: 15px;
+	}
+	&:hover span:after {
+		opacity: 1;
+		top: 0;
+		left: 0;
+	}
+}

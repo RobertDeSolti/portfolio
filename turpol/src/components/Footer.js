@@ -1,7 +1,3 @@
-/* eslint-disable no-dupe-keys */
-/* eslint-disable no-sequences */
-/*eslint no-undef: "error"*/
-import PropTypes from 'prop-types';
 import React from 'react';
 import {linkData} from '../js/massive'
 import './footer.scss'
@@ -32,7 +28,7 @@ const Menu = () => {
 }
 
 const Link = (props) => {
-	var {tittle,url1,url2,url3,url4,name1,name2,name3,name4} = props;
+	const {tittle,url1,url2,url3,url4,name1,name2,name3,name4} = props;
 	return(
 		<div className="nav-column">
 			<div className='nav-column__tittle'>{tittle}</div>
@@ -49,12 +45,3 @@ const Link = (props) => {
 }
 
 export default Footer;
-
-Footer.propTypes = {
-	response: PropTypes.oneOf(['desktop', 'mobile', 'tablet']),
-	names: PropTypes.arrayOf(PropTypes.string),
-	urls: PropTypes.arrayOf(PropTypes.string),
-};
-Footer.defaultProps = {
-	response: 'desktop'
-};

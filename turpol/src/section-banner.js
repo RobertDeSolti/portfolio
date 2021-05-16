@@ -4,7 +4,7 @@ import { Submit } from './components/Button.stories'
 
 const SectionBanner = () => {
   return (
-	<div className="section-banner">
+	<div className="section-banner" id='top'>
 		<div className='section-wrapper'>
 			<div className='section-banner-content'>
 				<h1 className='section-banner-content__tittle'>
