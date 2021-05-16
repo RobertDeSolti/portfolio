@@ -11,16 +11,16 @@ import ScrollButton from './components/Up'
 function App() {
   return (
     <>
-			<SectionHeader className="section-outer"/>
-			<SectionBanner className="section-outer"/>
-			<SectionBenefits className="section-outer"/>
-			<ScrollButton className='upbtn'/>
-			{/* <SectionInspiration className="section-outer"/> */}
-			{/* <SectionPerfection className="section-outer"/> */}
-			{/* <SectionToplist className="section-outer"/> */}
-			{/* <SectionVideo className="section-outer"/> */}
-			<SectionFooter className="section-outer"/>
-		</>
+      <ScrollButton className='upbtn' />
+      <SectionHeader className='section-outer' />
+      <SectionBanner className='section-outer' />
+      <SectionBenefits className='section-outer' />
+      {/* <SectionInspiration className="section-outer"/> */}
+      {/* <SectionPerfection className="section-outer"/> */}
+      {/* <SectionToplist className="section-outer"/> */}
+      {/* <SectionVideo className="section-outer"/> */}
+      <SectionFooter className='section-outer' />
+    </>
   )
 }
 
