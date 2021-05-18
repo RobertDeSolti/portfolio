@@ -4,11 +4,10 @@
 
 .header{
 	position: fixed;
+	width: 100%;
 	top: 0;
 	left: 0;
-	width: 100%;
-	z-index: 15;
-	transition: .2s linear;
+	z-index: 11;
 	padding-bottom: 30px;
 	background: $footHead;
 }

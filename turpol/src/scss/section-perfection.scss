@@ -15,6 +15,8 @@
 		gap: 140px;
 		align-items: center;
 		margin-bottom: 75px;
+		margin-right: 20px;
+		margin-left: 20px;
 		.picture{
 			position: relative;
 			z-index: 10;
@@ -55,7 +57,8 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 140px;
 		align-items: center;
-
+		margin-right: 20px;
+		margin-left: 20px;
 		.picture{
 			width: 600px;
 			align-content: center;
@@ -87,20 +90,6 @@
 				line-height: 24px;
 				color: $txtMain;
 				margin-bottom: 65px;
-			}
-			.link{
-				display: flex;
-				align-items: center;
-				&__text{
-					font-size: 16px;
-					font-weight: 400;
-					line-height: 24px;
-					color: $primary;
-					text-transform: uppercase;
-				}
-				&__icon{
-					margin-left: 35px;
-				}
 			}
 		}
 	}

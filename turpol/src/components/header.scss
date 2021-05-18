@@ -10,7 +10,8 @@
 	max-width: 1160px;
 	margin: 0 auto;
 	padding-top: 30px;
-	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
 	flex-wrap: wrap;
 	align-items:center;
 	justify-content: space-between;
@@ -57,11 +58,3 @@
 		}
 	}
 }
-
-
-
-
-@keyframes fadeIn {
-	from {opacity: 0;}
-	to {opacity:1 ;}
-  }

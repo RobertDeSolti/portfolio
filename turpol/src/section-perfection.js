@@ -3,12 +3,12 @@ import Navigation from './components/Navigation'
 
 const SectionPerfection = () => {
   return (
-	<div className="section-perfection" id='perfection'>
-		<div className='section-inner'>
-			<PerfectionBlockOne />
-			<PerfectionBlockTwo />
-		</div>
-	</div>
+    <div className='section-perfection' id='perfection'>
+      <div className='section-inner'>
+        <PerfectionBlockOne />
+        <PerfectionBlockTwo />
+      </div>
+    </div>
   )
 }
 
@@ -26,7 +26,7 @@ function PerfectionBlockOne() {
           this if i had the energy but under the bed, for attack the child, open
           the door
         </div>
-		<Navigation label='VIEW PREFECTURE'/>
+        <Navigation label='View Perfecture' />
       </div>
     </div>
   )
@@ -35,17 +35,17 @@ function PerfectionBlockOne() {
 function PerfectionBlockTwo() {
   return (
     <div className='section-perfection__block2'>
-        <div className='content'>
-        	<h3 className='tittle'>The "Dunajec": Castle in Niedzica</h3>
-        	<div className='subtittle'>
-				Jump off balcony, onto stranger's head. Chase ball of string hide when
-				guests come over. Being gorgeous with belly side up i could pee on
-				this if i had the energy but under the bed, for attack the child, open
-				the door
-        	</div>
-			<Navigation label='VIEW THE DUNAJEC'/>
+      <div className='content'>
+        <h3 className='tittle'>The "Dunajec": Castle in Niedzica</h3>
+        <div className='subtittle'>
+          Jump off balcony, onto stranger's head. Chase ball of string hide when
+          guests come over. Being gorgeous with belly side up i could pee on
+          this if i had the energy but under the bed, for attack the child, open
+          the door
+        </div>
+        <Navigation label='View The Dunajec' />
       </div>
-	  <div className='picture'>
+      <div className='picture'>
         <img src='img/b4_dunajec.jpg' alt='pic' className='picture__img' />
       </div>
     </div>
