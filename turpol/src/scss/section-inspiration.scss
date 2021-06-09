@@ -5,11 +5,10 @@
 .section-inspiration{
 	margin-bottom: 130px;
 	.section-inner{
-
 		max-width: 1260px;
-		margin: 0 20px;
+		margin: 0 auto;
 		font-family: "Lato";
-
+		padding: 0 20px;
 	}
 	&__head{
 		display: flex;
@@ -66,7 +65,7 @@
 				bottom: 0;
 				left: 0;
 				background: rgba(21, 24, 36, 0.4);
-				z-index: 5;
+				z-index: 6;
 			}
 			&__image{
 				height: 100%;
