@@ -33,9 +33,6 @@ const Postcard = () => {
               </div>
             </div>
             <p className='postcard__content'>{conText}</p>
-            <div className='postcard__button'>
-              <button label='SEE MORE' size='medium' type='button'></button>
-            </div>
           </div>
         )
       })}
