@@ -5,16 +5,16 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "node-sass": "5.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "fs-extra": "^10.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.2",
+    "react-scripts": "^4.0.3",
     "reactjs-popup": "^2.0.4",
+    "request": "^2.88.2",
     "sass": "^1.35.1",
-    "sass-loader": "^12.1.0",
     "styled-components": "^5.3.0",
-    "web-vitals": "^1.1.2"
+    "true-case-path": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +48,8 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9"
+    "@storybook/react": "^6.2.9",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^12.1.0"
   }
 }
