@@ -1,7 +1,5 @@
-// Button.stories.js
-/* eslint-disable import/no-anonymous-default-export */
-import React from 'react';
-import { Button } from './Button';
+import React from 'react'
+import { Button } from './Button'
 
 export default {
   title: 'Components/Button',
@@ -9,32 +7,32 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-};
+}
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
   primary: true,
   label: 'Button',
-};
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
-	primary: false,
-	label: 'Button',
-};
+  primary: false,
+  label: 'Button',
+}
 
-export const Submit = Template.bind({});
+export const Submit = Template.bind({})
 Submit.args = {
   size: 'large',
   type: 'submit',
   label: 'Button',
-};
+}
 
-export const Pressbtn = Template.bind({});
+export const Pressbtn = Template.bind({})
 Pressbtn.args = {
   size: 'medium',
   type: 'button',
   label: 'Button',
-};
+}
