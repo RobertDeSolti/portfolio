@@ -1,4 +1,3 @@
-import { info } from 'node-sass'
 import React from 'react'
 import { linkData } from '../js/massive'
 import './footer.scss'
@@ -23,28 +22,24 @@ const FooterLogo = () => {
 const Menu = () => {
   return (
     <div className='section-footer__nav'>
-      {linkData.map((links) => {
-        return <Column key={links.id} {...links} />
+      {linkData.map((links, idx) => {
+        return <Column key={idx} {...links} />
       })}
-      ;
     </div>
   )
 }
 
 const Column = (props) => {
-  const { tittle } = props
+  const { tittle, info } = props
   return (
     <div className='nav-column'>
       <div className='nav-column__tittle'>{tittle}</div>
       <ul className='nav-column__chapters'>
-        <li className='items'>
-          <>
-            {linkData.map((links) => {
-              return <Link key={links.info.id} {...info} />
-            })}
-            ;
-          </>
-        </li>
+        <>
+          {info.map((link, idx) => {
+            return <Link key={idx} {...link} />
+          })}
+        </>
       </ul>
     </div>
   )
@@ -53,11 +48,11 @@ const Column = (props) => {
 const Link = (props) => {
   const { href, name } = props
   return (
-    <>
+    <li className='items'>
       <a href={href} className='items__link'>
         {name}
       </a>
-    </>
+    </li>
   )
 }
 
